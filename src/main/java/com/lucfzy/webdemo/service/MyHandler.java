@@ -48,6 +48,7 @@ public class MyHandler {
         session.commit();
         session.close();
         mb.getIn().close();
+        System.out.println("for test");
         return "registerSuccess";
     }
 }
