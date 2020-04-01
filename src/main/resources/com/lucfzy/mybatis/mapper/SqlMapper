@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lucfzy.webdemo.dao.IUserDao">
+    <select id="findOne" resultType="com.lucfzy.webdemo.entity.User" parameterType="String">
+        select * from user where name = #{name};
+    </select>
+    <insert id="insertUser" parameterType="com.lucfzy.webdemo.entity.User">
+        insert into user (name,password,email) values (#{name},#{password},#{email});
+    </insert>
+</mapper>
